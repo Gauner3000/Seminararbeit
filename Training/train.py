@@ -19,14 +19,14 @@ DEVICE = torch.device("mps")
 BATCH_SIZE = 3
 NUM_EPOCHS = 10
 NUM_WORKERS = 2
-IMAGE_HEIGHT = 220  # 1280 originally
-IMAGE_WIDTH = 220  # 1918 originally
+IMAGE_HEIGHT = 220
+IMAGE_WIDTH = 220
 PIN_MEMORY = True
 LOAD_MODEL = True
-TRAIN_IMG_DIR = "/Users/felixwolter/Documents/Seminar-Arbeit/Data/Street/image/"
-TRAIN_MASK_DIR = "/Users/felixwolter/Documents/Seminar-Arbeit/Data/Street/mask/"
-VAL_IMG_DIR = "/Users/felixwolter/Documents/Seminar-Arbeit/Data/Street/image_test/"
-VAL_MASK_DIR = "/Users/felixwolter/Documents/Seminar-Arbeit/Data/Street/mask_test/"
+TRAIN_IMG_DIR = "path to/image/" #Path zu Trainings Bildern
+TRAIN_MASK_DIR = "path to/mask/" #Path zu Traings Masken
+VAL_IMG_DIR = "path to/image_test/" #Path zu Test Bildern
+VAL_MASK_DIR = "path to/mask_test/" #Path zu Test Masken
 
 def train_fn(loader, model, optimizer, loss_fn, scaler):
     loop = tqdm(loader)
